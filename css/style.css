@@ -1,0 +1,268 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  /* 导航栏 */
+  .navbar {
+      background: #2c3e50;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+  }
+
+  .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+  }
+
+  .nav-menu a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
+      color: #3498db;
+  }
+
+  /* Hero 区域 */
+  .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+  }
+
+  .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+  }
+
+  .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+  }
+
+  .btn {
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: transform 0.3s;
+  }
+
+  .btn:hover {
+      transform: translateY(-2px);
+  }
+
+  .btn-primary {
+      background: white;
+      color: #667eea;
+  }
+
+  .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+  }
+
+  /* 页脚 */
+  .footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 4rem;
+  }
+
+  .social-links {
+      margin-top: 1rem;
+  }
+
+  .social-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+  }
+
+  .social-links a:hover {
+      color: #3498db;
+  }
+
+ /* 页面头部 */
+ .page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* 博客列表 */
+.blog-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-item {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.blog-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+/* 关于页面 */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.skill h3 {
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+/* 作品集 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+.portfolio-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-content p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.portfolio-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-tags span {
+    background: #f8f9fa;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #667eea;
+}
