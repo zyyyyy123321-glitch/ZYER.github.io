@@ -1,64 +1,111 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="zh-CN">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>博客 - 我的个人网站</title>
-      <link rel="stylesheet" href="css/style.css">
+      <title>技术博客 - AI开发者</title>
+      <link rel="stylesheet" href="css/style-ai.css">
+      <link rel="stylesheet" href="css/ai-assistant.css">
+      <link rel="stylesheet" href="css/custom-cursor.css">
   </head>
   <body>
+      <canvas id="particles-canvas"></canvas>
+
       <nav class="navbar">
-          <div class="container">
-              <div class="logo">我的网站</div>
-              <ul class="nav-menu">
-                  <li><a href="index.html">首页</a></li>
-                  <li><a href="blog.html" class="active">博客</a></li>
-                  <li><a href="about.html">关于我</a></li>
-                  <li><a href="portfolio.html">作品集</a></li>
-              </ul>
-          </div>
+          <div class="logo">MyPortfolio</div>
+          <ul class="nav-links">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="blog.html">博客</a></li>
+              <li><a href="portfolio.html">作品集</a></li>
+              <li><a href="about.html">关于</a></li>
+          </ul>
       </nav>
 
-      <main>
-          <section class="page-header">
-              <div class="container">
-                  <h1>我的博客</h1>
-                  <p>分享我的想法和经验</p>
-              </div>
+      <div class="container">
+          <section>
+              <h1>技术博客</h1>
+              <p style="color: var(--text-secondary);">分享技术见解、项目经验和学习心得</p>
           </section>
 
-          <section class="section">
-              <div class="container">
-                  <div class="blog-list">
-                      <article class="blog-item">
-                          <h2>欢迎来到我的网站</h2>
-                          <p class="blog-date">2025年12月31日</p>
-                          <p>这是我用 HTML 和 CSS 搭建的第一版个人网站。虽然简单，但是从零开始学起，一步步搭建的过程让我学到了很多。</p>
-                          <a href="#" class="read-more">阅读全文 →</a>
-                      </article>
-
-                      <article class="blog-item">
-                          <h2>如何开始学习编程</h2>
-                          <p class="blog-date">2025年12月25日</p>
-                          <p>作为一名编程初学者，我想分享一些学习经验。选择合适的语言、坚持练习、多做项目，这些都是关键...</p>
-                          <a href="#" class="read-more">阅读全文 →</a>
-                      </article>
-
-                      <article class="blog-item">
-                          <h2>我的 2025 年目标</h2>
-                          <p class="blog-date">2025年12月20日</p>
-                          <p>新的一年即将到来，我给自己定下了一些目标：学习前端开发、搭建个人网站、坚持写博客...</p>
-                          <a href="#" class="read-more">阅读全文 →</a>
-                      </article>
+          <section id="blog-list">
+              <div class="card" style="margin-bottom: 2rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                      <span style="background: linear-gradient(135deg, #00f5ff, #a855f7); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-15</span>
+                      <div>
+                          <span class="tag">AI</span>
+                          <span class="tag">深度学习</span>
+                      </div>
                   </div>
+                  <h3 style="margin-bottom: 0.5rem;">使用Transformer构建AI聊天机器人</h3>
+                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                      探索如何使用Transformer架构和预训练模型构建一个智能对话系统...
+                  </p>
+                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
+              </div>
+
+              <div class="card" style="margin-bottom: 2rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                      <span style="background: linear-gradient(135deg, #a855f7, #ec4899); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-10</span>
+                      <div>
+                          <span class="tag">React</span>
+                          <span class="tag">前端</span>
+                      </div>
+                  </div>
+                  <h3 style="margin-bottom: 0.5rem;">React 18新特性完全指南</h3>
+                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                      深入了解React 18的并发特性、自动批处理和Suspense改进...
+                  </p>
+                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
+              </div>
+
+              <div class="card" style="margin-bottom: 2rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                      <span style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-05</span>
+                      <div>
+                          <span class="tag">Python</span>
+                          <span class="tag">数据科学</span>
+                      </div>
+                  </div>
+                  <h3 style="margin-bottom: 0.5rem;">Python数据可视化最佳实践</h3>
+                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                      使用Matplotlib、Seaborn和Plotly创建 stunning的数据可视化图表...
+                  </p>
+                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
+              </div>
+
+              <div class="card" style="margin-bottom: 2rem;">
+                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                      <span style="background: linear-gradient(135deg, #ec4899, #f43f5e); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-01</span>
+                      <div>
+                          <span class="tag">Docker</span>
+                          <span class="tag">DevOps</span>
+                      </div>
+                  </div>
+                  <h3 style="margin-bottom: 0.5rem;">Docker容器化部署实战</h3>
+                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                      从零开始学习Docker，实现应用的容器化部署和编排...
+                  </p>
+                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
               </div>
           </section>
-      </main>
+      </div>
 
-      <footer class="footer">
-          <div class="container">
-              <p>&copy; 2025 我的个人网站</p>
-          </div>
-      </footer>
+      <script src="js/particles.js"></script>
+      <script src="js/ai-assistant.js"></script>
+      <script src="js/custom-cursor.js"></script>
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const sections = document.querySelectorAll('section');
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          entry.target.classList.add('visible');
+                      }
+                  });
+              }, { threshold: 0.1 });
+
+              sections.forEach(section => observer.observe(section));
+          });
+      </script>
   </body>
   </html>

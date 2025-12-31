@@ -1,115 +1,158 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="zh-CN">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>作品集 - 我的个人网站</title>
-      <link rel="stylesheet" href="css/style.css">
+      <title>作品集 - AI开发者</title>
+      <link rel="stylesheet" href="css/style-ai.css">
+      <link rel="stylesheet" href="css/ai-assistant.css">
+      <link rel="stylesheet" href="css/custom-cursor.css">
   </head>
   <body>
+      <canvas id="particles-canvas"></canvas>
+
       <nav class="navbar">
-          <div class="container">
-              <div class="logo">我的网站</div>
-              <ul class="nav-menu">
-                  <li><a href="index.html">首页</a></li>
-                  <li><a href="blog.html">博客</a></li>
-                  <li><a href="about.html">关于我</a></li>
-                  <li><a href="portfolio.html" class="active">作品集</a></li>
-              </ul>
-          </div>
+          <div class="logo">MyPortfolio</div>
+          <ul class="nav-links">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="blog.html">博客</a></li>
+              <li><a href="portfolio.html">作品集</a></li>
+              <li><a href="about.html">关于</a></li>
+          </ul>
       </nav>
 
-      <main>
-          <section class="page-header">
-              <div class="container">
-                  <h1>我的作品集</h1>
-                  <p>展示我的项目和创作</p>
+      <div class="container">
+          <section>
+              <h1>我的作品</h1>
+              <p style="color: var(--text-secondary);">展示我的项目和创作</p>
+          </section>
+
+          <section>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+                  <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;">全部</button>
+                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">AI项目</button>
+                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Web应用</button>
+                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">数据分析</button>
               </div>
           </section>
 
-          <section class="section">
-              <div class="container">
-                  <div class="portfolio-grid">
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">🌐</div>
-                          <div class="portfolio-content">
-                              <h3>个人网站</h3>
-                              <p>使用 HTML 和 CSS 从零搭建的响应式个人网站</p>
-                              <div class="portfolio-tags">
-                                  <span>HTML</span>
-                                  <span>CSS</span>
-                              </div>
-                          </div>
+          <section>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(168, 85, 247, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          🤖
                       </div>
+                      <h3>AI智能客服系统</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          基于GPT的智能客服系统，支持多轮对话、情感分析和自动回复。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">Python</span>
+                          <span class="tag">GPT</span>
+                          <span class="tag">FastAPI</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
+                  </div>
 
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">📝</div>
-                          <div class="portfolio-content">
-                              <h3>博客系统</h3>
-                              <p>简洁优雅的博客平台，支持 Markdown 编辑</p>
-                              <div class="portfolio-tags">
-                                  <span>JavaScript</span>
-                                  <span>设计</span>
-                              </div>
-                          </div>
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          🌐
                       </div>
+                      <h3>实时协作平台</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          支持多人实时协作的在线文档编辑平台，使用WebSocket实现实时同步。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">React</span>
+                          <span class="tag">Node.js</span>
+                          <span class="tag">WebSocket</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
+                  </div>
 
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">🎮</div>
-                          <div class="portfolio-content">
-                              <h3>小游戏合集</h3>
-                              <p>使用 JavaScript 开发的经典小游戏</p>
-                              <div class="portfolio-tags">
-                                  <span>游戏</span>
-                                  <span>趣味</span>
-                              </div>
-                          </div>
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          📊
                       </div>
+                      <h3>数据可视化仪表盘</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          企业级数据分析仪表盘，支持实时数据更新和交互式图表。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">Vue</span>
+                          <span class="tag">D3.js</span>
+                          <span class="tag">Python</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
+                  </div>
 
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">📱</div>
-                          <div class="portfolio-content">
-                              <h3>移动端应用</h3>
-                              <p>专注于用户体验的移动应用设计</p>
-                              <div class="portfolio-tags">
-                                  <span>UI/UX</span>
-                                  <span>移动端</span>
-                              </div>
-                          </div>
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(244, 63, 94, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          🎨
                       </div>
+                      <h3>AI图像生成器</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          基于Stable Diffusion的AI图像生成工具，支持文本生成图像和图像编辑。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">Python</span>
+                          <span class="tag">PyTorch</span>
+                          <span class="tag">Flask</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
+                  </div>
 
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">🤖</div>
-                          <div class="portfolio-content">
-                              <h3>自动化工具</h3>
-                              <p>提高效率的脚本和自动化工具</p>
-                              <div class="portfolio-tags">
-                                  <span>Python</span>
-                                  <span>自动化</span>
-                              </div>
-                          </div>
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(59, 130, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          📱
                       </div>
+                      <h3>跨平台移动应用</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          使用React Native开发的跨平台移动应用，支持iOS和Android。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">React Native</span>
+                          <span class="tag">Redux</span>
+                          <span class="tag">Firebase</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
+                  </div>
 
-                      <div class="portfolio-item">
-                          <div class="portfolio-image">🎨</div>
-                          <div class="portfolio-content">
-                              <h3>设计作品</h3>
-                              <p>Logo、海报和界面设计作品集</p>
-                              <div class="portfolio-tags">
-                                  <span>设计</span>
-                                  <span>创意</span>
-                              </div>
-                          </div>
+                  <div class="card">
+                      <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                          🔐
                       </div>
+                      <h3>区块链投票系统</h3>
+                      <p style="color: var(--text-secondary); margin: 1rem 0;">
+                          基于以太坊的去中心化投票系统，确保投票的透明性和不可篡改性。
+                      </p>
+                      <div style="margin-bottom: 1rem;">
+                          <span class="tag">Solidity</span>
+                          <span class="tag">Web3.js</span>
+                          <span class="tag">Next.js</span>
+                      </div>
+                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
                   </div>
               </div>
           </section>
-      </main>
+      </div>
 
-      <footer class="footer">
-          <div class="container">
-              <p>&copy; 2025 我的个人网站</p>
-          </div>
-      </footer>
+      <script src="js/particles.js"></script>
+      <script src="js/ai-assistant.js"></script>
+      <script src="js/custom-cursor.js"></script>
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const sections = document.querySelectorAll('section');
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          entry.target.classList.add('visible');
+                      }
+                  });
+              }, { threshold: 0.1 });
+
+              sections.forEach(section => observer.observe(section));
+          });
+      </script>
   </body>
   </html>

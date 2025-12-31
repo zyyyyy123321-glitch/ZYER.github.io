@@ -1,43 +1,123 @@
- <!DOCTYPE html>
-  <html lang="zh-CN">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>我的个人网站</title>
-      <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-      <nav class="navbar">
-          <div class="container">
-              <div class="logo">我的网站</div>
-              <ul class="nav-menu">
-                  <li><a href="index.html" class="active">首页</a></li>
-                  <li><a href="blog.html">博客</a></li>
-                  <li><a href="about.html">关于我</a></li>
-                  <li><a href="portfolio.html">作品集</a></li>
-              </ul>
-          </div>
-      </nav>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页 - AI开发者</title>
+    <link rel="stylesheet" href="css/style-ai.css">
+    <link rel="stylesheet" href="css/ai-assistant.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">  <!-- 新增 -->
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
 
-      <main>
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="blog.html">博客</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="about.html">关于</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 其他内容保持不变... -->
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/custom-cursor.js"></script>  <!-- 新增 -->
+    <script>
+        // 打字机效果代码保持不变...
+    </script>
+</body>
+</html>
+
+      <!-- 主内容 -->
+      <div class="container">
+          <!-- Hero区域 -->
           <section class="hero">
-              <div class="container">
-                  <div class="hero-content">
-                      <h1>欢迎来到我的个人网站</h1>
-                      <p>分享我的想法、项目和创作</p>
-                      <div class="hero-buttons">
-                          <a href="blog.html" class="btn btn-primary">阅读博客</a>
-                          <a href="portfolio.html" class="btn btn-secondary">查看作品</a>
+              <h1 class="typewriter" id="hero-title"></h1>
+              <p class="gradient-text" style="font-size: 1.5rem; margin: 1rem 0;">AI开发者 / 不入流网工 / Web3爱好者</p>
+              <div style="margin-top: 2rem;">
+                  <a href="portfolio.html" class="btn btn-primary">探索我的作品</a>
+                  <a href="about.html" class="btn btn-secondary" style="margin-left: 1rem;">了解更多</a>
+              </div>
+          </section>
+
+          <!-- 特色卡片区 -->
+          <section id="features">
+              <h2>我的专长</h2>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                  <div class="card">
+                      <h3 style="color: #00f5ff;">🤖 深度使用AI工具的网工</h3>
+                      <p style="color: var(--text-secondary); margin-top: 1rem;">
+                        Vibe Coding，我就是我的工具，我就是我的代码。
+                      </p>
+                      <div style="margin-top: 1rem;">
+                          <span class="tag">cursor</span>
+                          <span class="tag">claude</span>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3 style="color: #a855f7;">💻 Web3爱好者</h3>
+                      <p style="color: var(--text-secondary); margin-top: 1rem;">
+                        分享普通人都能做到的Web3项目。
+                      </p>
+                      <div style="margin-top: 1rem;">
+                          <span class="tag">OKB</span>
+                          <span class="tag">Binance</span>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                      <h3 style="color: #ec4899;">📊 智库数据分析</h3>
+                      <p style="color: var(--text-secondary); margin-top: 1rem;">
+                          数据可视化、大数据处理、商业智能。从数据中提取有价值的洞察。
+                      </p>
+                      <div style="margin-top: 1rem;">
+                          <span class="tag">Notebooklm</span>
+                          <span class="tag">飞书文档</span>
                       </div>
                   </div>
               </div>
           </section>
-      </main>
+      </div>
 
-      <footer class="footer">
-          <div class="container">
-              <p>&copy; 2025 我的个人网站</p>
-          </div>
-      </footer>
+      <script src="js/particles.js"></script>
+      <script src="js/ai-assistant.js"></script>
+      <script>
+          // 打字机效果
+          const title = "你好，我是[ZYER]";
+          const titleElement = document.getElementById('hero-title');
+          let index = 0;
+
+          function typeWriter() {
+              if (index < title.length) {
+                  titleElement.textContent += title.charAt(index);
+                  index++;
+                  setTimeout(typeWriter, 100);
+              }
+          }
+
+          // 页面加载动画
+          document.addEventListener('DOMContentLoaded', () => {
+              typeWriter();
+
+              // 滚动动画
+              const sections = document.querySelectorAll('section');
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          entry.target.classList.add('visible');
+                      }
+                  });
+              }, { threshold: 0.1 });
+
+              sections.forEach(section => observer.observe(section));
+          });
+      </script>
   </body>
   </html>

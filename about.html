@@ -1,77 +1,169 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="zh-CN">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>关于我 - 我的个人网站</title>
-      <link rel="stylesheet" href="css/style.css">
+      <title>关于我 - AI开发者</title>
+      <link rel="stylesheet" href="css/style-ai.css">
+      <link rel="stylesheet" href="css/ai-assistant.css">
+      <link rel="stylesheet" href="css/custom-cursor.css">
   </head>
   <body>
+      <canvas id="particles-canvas"></canvas>
+
       <nav class="navbar">
-          <div class="container">
-              <div class="logo">我的网站</div>
-              <ul class="nav-menu">
-                  <li><a href="index.html">首页</a></li>
-                  <li><a href="blog.html">博客</a></li>
-                  <li><a href="about.html" class="active">关于我</a></li>
-                  <li><a href="portfolio.html">作品集</a></li>
-              </ul>
-          </div>
+          <div class="logo">MyPortfolio</div>
+          <ul class="nav-links">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="blog.html">博客</a></li>
+              <li><a href="portfolio.html">作品集</a></li>
+              <li><a href="about.html">关于</a></li>
+          </ul>
       </nav>
 
-      <main>
-          <section class="page-header">
-              <div class="container">
-                  <h1>关于我</h1>
-                  <p>了解更多关于我的信息</p>
+      <div class="container">
+          <section style="text-align: center;">
+              <div style="width: 150px; height: 150px; margin: 0 auto 2rem; background: linear-gradient(135deg, #00f5ff, #a855f7); clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                  👨‍💻
               </div>
+              <h1>关于我</h1>
+              <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                  你好！我是一名热爱技术的开发者，专注于AI和Web开发。
+                  我喜欢探索新技术，解决有趣的问题，并与他人分享知识。
+              </p>
           </section>
 
-          <section class="section">
-              <div class="container">
-                  <div class="about-content">
-                      <div class="about-text">
-                          <h2>你好！👋</h2>
-                          <p>我是一名热爱编程和创造的个人开发者。我喜欢学习新技术，动手做项目，并把学到的知识分享给其他 人。</p>
-
-                          <h2>我的技能</h2>
-                          <div class="skills">
-                              <div class="skill">
-                                  <h3>前端开发</h3>
-                                  <p>HTML, CSS, JavaScript</p>
+          <section>
+              <h2>技能树</h2>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                  <div class="card">
+                      <h3 style="color: #00f5ff;">编程语言</h3>
+                      <div style="margin-top: 1rem;">
+                          <div style="margin-bottom: 1rem;">
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>Python</span>
+                                  <span>90%</span>
                               </div>
-                              <div class="skill">
-                                  <h3>后端开发</h3>
-                                  <p>Python, Node.js</p>
-                              </div>
-                              <div class="skill">
-                                  <h3>工具</h3>
-                                  <p>Git, VS Code, Linux</p>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 90%; background: linear-gradient(90deg, #00f5ff, #a855f7); border-radius: 4px;"></div>
                               </div>
                           </div>
+                          <div style="margin-bottom: 1rem;">
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>JavaScript</span>
+                                  <span>85%</span>
+                              </div>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 85%; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 4px;"></div>
+                              </div>
+                          </div>
+                          <div>
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>Java</span>
+                                  <span>75%</span>
+                              </div>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 75%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 4px;"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
 
-                          <h2>我的兴趣</h2>
-                          <ul>
-                              <li>💻 编程和软件开发</li>
-                              <li>📚 阅读技术博客</li>
-                              <li>🎮 开发小游戏</li>
-                              <li>✈️ 旅行和探索</li>
-                          </ul>
-
-                          <h2>联系方式</h2>
-                          <p>如果你想和我交流，可以通过以下方式联系我：</p>
-                          <p>📧 Email: your-email@example.com</p>
-                          <p>🐙 GitHub: github.com/yourusername</p>
+                  <div class="card">
+                      <h3 style="color: #a855f7;">框架与工具</h3>
+                      <div style="margin-top: 1rem;">
+                          <div style="margin-bottom: 1rem;">
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>React / Vue</span>
+                                  <span>88%</span>
+                              </div>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 88%; background: linear-gradient(90deg, #00f5ff, #a855f7); border-radius: 4px;"></div>
+                              </div>
+                          </div>
+                          <div style="margin-bottom: 1rem;">
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>TensorFlow / PyTorch</span>
+                                  <span>82%</span>
+                              </div>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 82%; background: linear-gradient(90deg, #a855f7, #ec4899); border-radius: 4px;"></div>
+                              </div>
+                          </div>
+                          <div>
+                              <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                  <span>Docker / Git</span>
+                                  <span>80%</span>
+                              </div>
+                              <div style="height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden;">
+                                  <div style="height: 100%; width: 80%; background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 4px;"></div>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
           </section>
-      </main>
 
-      <footer class="footer">
-          <div class="container">
-              <p>&copy; 2025 我的个人网站</p>
-          </div>
-      </footer>
+          <section>
+              <h2>经历</h2>
+              <div style="max-width: 800px; margin: 0 auto;">
+                  <div style="border-left: 3px solid rgba(0, 245, 255, 0.3); padding-left: 2rem; position: relative;">
+                      <div style="margin-bottom: 3rem; position: relative;">
+                          <div style="position: absolute; left: -2.6rem; top: 0; width: 1rem; height: 1rem; background: #00f5ff; border-radius: 50%; box-shadow: 0 0 10px var(--glow-primary);"></div>
+                          <span style="color: #00f5ff; font-size: 0.875rem;">2022 - 至今</span>
+                          <h3 style="margin-top: 0.5rem;">高级前端工程师</h3>
+                          <p style="color: var(--text-secondary);">科技公司ABC</p>
+                          <p style="color: var(--text-muted); margin-top: 0.5rem;">负责公司核心产品的前端架构设计和开发</p>
+                      </div>
+
+                      <div style="margin-bottom: 3rem; position: relative;">
+                          <div style="position: absolute; left: -2.6rem; top: 0; width: 1rem; height: 1rem; background: #a855f7; border-radius: 50%; box-shadow: 0 0 10px var(--glow-secondary);"></div>
+                          <span style="color: #a855f7; font-size: 0.875rem;">2020 - 2022</span>
+                          <h3 style="margin-top: 0.5rem;">AI工程师</h3>
+                          <p style="color: var(--text-secondary);">创业公司XYZ</p>
+                          <p style="color: var(--text-muted); margin-top: 0.5rem;">开发和部署机器学习模型，构建智能推荐 系统</p>
+                      </div>
+
+                      <div style="position: relative;">
+                          <div style="position: absolute; left: -2.6rem; top: 0; width: 1rem; height: 1rem; background: #ec4899; border-radius: 50%; box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);"></div>
+                          <span style="color: #ec4899; font-size: 0.875rem;">2016 - 2020</span>
+                          <h3 style="margin-top: 0.5rem;">计算机科学学士</h3>
+                          <p style="color: var(--text-secondary);">某某大学</p>
+                          <p style="color: var(--text-muted); margin-top: 0.5rem;">主修计算机科学，辅修数学</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section style="text-align: center;">
+              <h2>联系我</h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                  如果您有任何问题或合作意向，欢迎与我联系！
+              </p>
+              <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                  <a href="mailto:contact@example.com" class="btn btn-primary">📧 发送邮件</a>
+                  <a href="#" class="btn btn-secondary">🐙 GitHub</a>
+                  <a href="#" class="btn btn-secondary">💼 LinkedIn</a>
+              </div>
+          </section>
+      </div>
+
+      <script src="js/particles.js"></script>
+      <script src="js/ai-assistant.js"></script>
+      <script src="js/custom-cursor.js"></script>
+      <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const sections = document.querySelectorAll('section');
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          entry.target.classList.add('visible');
+                      }
+                  });
+              }, { threshold: 0.1 });
+
+              sections.forEach(section => observer.observe(section));
+          });
+      </script>
   </body>
   </html>
