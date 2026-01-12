@@ -29,6 +29,11 @@
 <body>
     <canvas id="particles-canvas"></canvas>
 
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
+
     <nav class="navbar">
         <div class="logo">ZYER</div>
         <ul class="nav-links">
@@ -209,9 +214,19 @@
         <p>&copy; 2025 ZYER. 用 ❤️ 和 AI 工具构建</p>
     </footer>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <script src="js/particles.js"></script>
     <script src="js/ai-assistant.js"></script>
     <script src="js/custom-cursor.js"></script>
+    <script src="js/theme-toggle.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');

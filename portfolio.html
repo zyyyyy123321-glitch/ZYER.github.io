@@ -23,6 +23,11 @@
 <body>
     <canvas id="particles-canvas"></canvas>
 
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
+
     <nav class="navbar">
         <div class="logo">ZYER</div>
         <ul class="nav-links">
@@ -256,5 +261,16 @@
             sections.forEach(section => observer.observe(section));
         });
     </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script src="js/theme-toggle.js"></script>
 </body>
 </html>

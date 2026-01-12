@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO -->
+    <title>Vibe Coding：我与AI的协作编程之道 - ZYER的技术博客</title>
+    <meta name="description" content="探讨如何使用Cursor和Claude等AI工具实现高效的编程体验。分享我"我就是我的工具，我就是我的代码"的编程哲学。">
+    <meta name="keywords" content="ZYER, Vibe Coding, AI编程, Cursor, Claude, AI工具">
+    <meta name="author" content="ZYER">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Vibe Coding：我与AI的协作编程之道">
+    <meta property="og:description" content="探讨如何使用Cursor和Claude等AI工具实现高效的编程体验。">
+    <meta property="og:url" content="https://zyerai.github.io/zyer/blog/vibe-coding-ai.html">
+    <meta property="article:published_time" content="2025-01-10">
+    <meta property="article:author" content="ZYER">
+    <meta property="article:section" content="AI开发">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vibe Coding：我与AI的协作编程之道">
+    <meta name="twitter:description" content="探讨如何使用Cursor和Claude等AI工具实现高效的编程体验。">
+
+    <link rel="stylesheet" href="../css/style-ai.css">
+    <link rel="stylesheet" href="../css/ai-assistant.css">
+    <link rel="stylesheet" href="../css/custom-cursor.css">
+    <link rel="stylesheet" href="../css/blog-post.css">
+    <link rel="canonical" href="https://zyerai.github.io/zyer/blog/vibe-coding-ai.html">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <nav class="navbar">
+        <div class="logo">ZYER</div>
+        <ul class="nav-links">
+            <li><a href="../index.html" aria-label="首页">首页</a></li>
+            <li><a href="../blog.html" aria-label="博客">博客</a></li>
+            <li><a href="../portfolio.html" aria-label="作品集">作品集</a></li>
+            <li><a href="../about.html" aria-label="关于">关于</a></li>
+        </ul>
+    </nav>
+
+    <article class="blog-post-container">
+        <!-- 文章头部 -->
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span class="blog-date">2025-01-10</span>
+                <span class="blog-category">AI开发</span>
+                <span class="blog-reading-time">📖 阅读时间：8分钟</span>
+            </div>
+            <h1 class="blog-title">Vibe Coding：我与AI的协作编程之道</h1>
+            <p class="blog-excerpt">探讨如何使用Cursor和Claude等AI工具实现高效的编程体验。分享我"我就是我的工具，我就是我的代码"的编程哲学，以及如何让AI成为真正的编程伙伴而非简单的代码生成器。</p>
+            <div class="blog-tags">
+                <span class="tag">AI</span>
+                <span class="tag">Cursor</span>
+                <span class="tag">Vibe Coding</span>
+                <span class="tag">Claude</span>
+            </div>
+        </header>
+
+        <!-- 文章内容 -->
+        <div class="blog-content">
+            <div class="prose">
+                <h2>什么是Vibe Coding？</h2>
+                <p>
+                    "Vibe Coding"这个词听起来很抽象，但对我来说，它代表了一种全新的编程范式——
+                    人类与AI的深度协作。在这个范式中，我不是在"使用"AI工具，而是在与AI共同创作。
+                </p>
+                <p>
+                    我的座右铭是：<strong>"我就是我的工具，我就是我的代码"</strong>。
+                    这句话的含义是，当我与AI协作时，我们形成了一个统一的编程实体。我的意图、知识和创造力，
+                    通过AI的理解和执行能力，无缝地转化为代码。
+                </p>
+
+                <h2>我的工具链</h2>
+                <p>
+                    在日常开发中，我主要使用以下AI工具：
+                </p>
+                <ul>
+                    <li><strong>Cursor</strong> - 我的IDE，内置AI补全和对话功能</li>
+                    <li><strong>Claude</strong> - 最懂我意图的AI助手，擅长理解复杂需求</li>
+                    <li><strong>GitHub Copilot</strong> - 快速的代码补全伙伴</li>
+                </ul>
+
+                <h2>实践技巧</h2>
+
+                <h3>1. 精准的提示词工程</h3>
+                <p>
+                    与AI协作的关键是学会"说AI的语言"。我发现，好的提示词应该包含：
+                </p>
+                <pre><code># 上下文
+我正在开发一个React组件，用于展示用户个人资料
+
+# 任务
+请创建一个ProfileCard组件，包含头像、姓名、简介和社交链接
+
+# 要求
+- 使用TypeScript
+- 支持暗色模式
+- 响应式设计
+- 添加hover动画效果</code></pre>
+
+                <h3>2. 渐进式开发</h3>
+                <p>
+                    不要让AI一次性生成大量代码。我的做法是：
+                </p>
+                <ul>
+                    <li>先让AI生成项目结构和核心功能</li>
+                    <li>逐步迭代，每次让AI完善一个模块</li>
+                    <li>保持与AI的对话，让它理解我的设计决策</li>
+                </ul>
+
+                <h3>3. 代码审查与重构</h3>
+                <p>
+                    AI生成代码后，我会：
+                </p>
+                <ul>
+                    <li>让AI解释生成的代码逻辑</li>
+                    <li>询问是否有更好的实现方式</li>
+                    <li>让AI检查潜在的性能问题</li>
+                    <li>要求添加注释和文档</li>
+                </ul>
+
+                <h2>实际案例</h2>
+                <p>
+                    最近，我用Cursor + Claude开发了一个<strong>Claude Code提示词优化工具</strong>。
+                    整个过程如下：
+                </p>
+
+                <h3>Step 1: 需求分析</h3>
+                <p>
+                    我向Claude描述了项目愿景：一个专门为Claude AI设计的提示词优化和管理工具。
+                </p>
+
+                <h3>Step 2: 架构设计</h3>
+                <p>
+                    通过与Claude讨论，我们确定了技术栈：
+                </p>
+                <ul>
+                    <li>前端：React + TypeScript</li>
+                    <li>后端：Python + FastAPI</li>
+                    <li>数据库：SQLite</li>
+                    <li>AI集成：Claude API</li>
+                </ul>
+
+                <h3>Step 3: 迭代开发</h3>
+                <p>
+                    每天我花费4-6小时与AI协作，每次专注于一个功能模块。
+                    Cursor的代码补全让我打字量减少了70%，而Claude的代码审查保证了代码质量。
+                </p>
+
+                <h3>Step 4: 测试与优化</h3>
+                <p>
+                    让AI生成测试用例，进行代码覆盖率分析，并优化性能瓶颈。
+                </p>
+
+                <h2>心得体会</h2>
+
+                <h3>AI不是替代，而是增强</h3>
+                <p>
+                    很多人担心AI会取代程序员。我的观点恰恰相反：
+                    AI让程序员从繁琐的编码中解放出来，专注于更有价值的架构设计和问题解决。
+                </p>
+
+                <h3>保持学习</h3>
+                <p>
+                    即使有AI辅助，持续学习依然重要。我每天都会：
+                </p>
+                <ul>
+                    <li>阅读AI生成的代码，理解其实现原理</li>
+                    <li>学习新的编程范式和最佳实践</li>
+                    <li>关注AI工具的最新发展</li>
+                </ul>
+
+                <h3>建立自己的知识库</h3>
+                <p>
+                    使用NotebookLM和飞书文档构建个人知识库，
+                    记录与AI协作的经验教训，形成可复用的模式和实践。
+                </p>
+
+                <h2>未来展望</h2>
+                <p>
+                    随着AI技术的不断进步，我相信"Vibe Coding"会成为主流的开发模式。
+                    未来的程序员更像是一个"指挥家"，而AI则是乐团的演奏家，
+                    我们共同创造出美妙的代码交响曲。
+                </p>
+
+                <h2>总结</h2>
+                <p>
+                    Vibe Coding不仅是编程技巧，更是一种思维方式。
+                    它要求我们：
+                </p>
+                <ul>
+                    <li>保持开放的心态，拥抱AI技术</li>
+                    <li>学会与AI沟通，精准表达意图</li>
+                    <li>保持批判性思维，不盲目依赖AI</li>
+                    <li>持续学习和反思，优化协作流程</li>
+                </ul>
+
+                <blockquote>
+                    "工具的终极形态是工具本身变得透明，让使用者感觉不到工具的存在，
+                    只专注于创造本身。" —— 这就是我理解的Vibe Coding。
+                </blockquote>
+
+                <p>
+                    如果你也在使用AI工具进行开发，欢迎在评论区分享你的经验和心得！
+                </p>
+            </div>
+        </div>
+
+        <!-- 文章导航 -->
+        <nav class="blog-navigation">
+            <a href="../blog.html" class="btn btn-secondary">← 返回博客列表</a>
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-secondary">← 上一篇</a>
+                <a href="web3-guide.html" class="btn btn-secondary">下一篇 →</a>
+            </div>
+        </nav>
+
+        <!-- 相关文章 -->
+        <section class="related-posts">
+            <h2>相关文章</h2>
+            <div class="related-posts-grid">
+                <a href="claude-prompts.html" class="related-post-card">
+                    <h3>Claude提示词工程实战技巧</h3>
+                    <p>分享在使用Claude AI过程中的提示词技巧和最佳实践</p>
+                </a>
+                <a href="../projects/cursor-config.html" class="related-post-card">
+                    <h3>Cursor配置分享平台</h3>
+                    <p>社区驱动的Cursor编辑器配置分享平台</p>
+                </a>
+                <a href="web3-guide.html" class="related-post-card">
+                    <h3>普通人如何开始Web3之旅</h3>
+                    <p>面向Web3新手的完整指南</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 评论区 -->
+        <section class="comments-section">
+            <h2>讨论</h2>
+            <div id="giscus-container"></div>
+        </section>
+    </article>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 4rem;">
+        <p>&copy; 2025 ZYER. 用 ❤️ 和 AI 工具构建</p>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Giscus评论系统 -->
+    <script>
+        const giscusConfig = {
+            src: 'https://giscus.app/client.js',
+            'data-repo': 'zyerai/zyer',
+            'data-repo-id': 'R_kgDONXXXXX',
+            'data-category': 'Announcements',
+            'data-category-id': 'DIC_kwDONXXXXX',
+            'data-mapping': 'pathname',
+            'data-strict': '0',
+            'data-reactions-enabled': '1',
+            'data-emit-metadata': '0',
+            'data-input-position': 'bottom',
+            'data-theme': 'preferred_color_scheme',
+            'data-lang': 'zh-CN',
+            'data-loading': 'lazy',
+            crossorigin: 'anonymous',
+            async: true
+        };
+
+        function loadGiscus() {
+            const script = document.createElement('script');
+            Object.entries(giscusConfig).forEach(([key, value]) => {
+                script.setAttribute(key, value);
+            });
+            document.getElementById('giscus-container').appendChild(script);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadGiscus);
+    </script>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/ai-assistant.js"></script>
+    <script src="../js/custom-cursor.js"></script>
+    <script src="../js/theme-toggle.js"></script>
+
+    <script>
+        // 滚动进度条
+        const progressBar = document.createElement('div');
+        progressBar.className = 'reading-progress';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = progress + '%';
+        });
+
+        // 代码高亮
+        document.addEventListener('DOMContentLoaded', () => {
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js';
+            script.onload = () => hljs.highlightAll();
+            document.head.appendChild(script);
+
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css';
+            document.head.appendChild(link);
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
