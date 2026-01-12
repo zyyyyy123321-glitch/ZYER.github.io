@@ -240,13 +240,226 @@ h3 {
     background-clip: text;
 }
 
+/* ==================== 响应式设计 ==================== */
+
+/* 平板设备 (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.6rem; }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+/* 移动设备 (最大768px) */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.5rem; }
-    .navbar { padding: 1rem; }
-    .nav-links { gap: 1rem; }
-    .container { padding: 0 1rem; }
+    /* 导航栏优化 */
+    .navbar {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .nav-links a {
+        padding: 0.4rem 0;
+    }
+
+    /* 容器优化 */
+    .container {
+        padding: 0 1rem;
+        padding-top: 80px;
+    }
+
+    /* 标题优化 */
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* 按钮优化 */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* 卡片优化 */
+    .card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Section优化 */
+    section {
+        padding: 2.5rem 0;
+    }
+
+    /* 标签优化 */
+    .tag {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    /* 英雄区域 */
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* 网格布局优化 */
+    [style*="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"],
+    [style*="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* 按钮组优化 */
+    [style*="display: flex; gap: 1rem"],
+    [style*="display: flex; gap: 1.5rem"] {
+        flex-direction: column;
+        gap: 0.75rem !important;
+    }
+
+    [style*="display: flex; gap: 1rem"] .btn,
+    [style*="display: flex; gap: 1.5rem"] .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+}
+
+/* 小屏手机 (最大480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar .logo {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+        padding-top: 70px;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* 触摸屏设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover,
+    .card:hover,
+    .tag:hover,
+    .nav-links a:hover {
+        transform: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .card:active {
+        transform: scale(0.99);
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding-top: 60px;
+    }
+
+    section {
+        padding: 1.5rem 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .card {
+        border: 2px solid var(--border-color);
+    }
+
+    .btn-secondary {
+        border-width: 2px;
+    }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 @keyframes fadeInUp {

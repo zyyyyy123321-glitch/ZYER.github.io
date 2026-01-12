@@ -3,121 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页 - AI开发者</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 基础SEO -->
+    <title>ZYER - AI开发者 & Web3爱好者 | 个人主页</title>
+    <meta name="description" content="我是ZYER，一名热爱AI和Web开发的开发者。专注于深度学习、Web3、数据分析，分享技术见解和项目经验。使用Cursor、Claude等AI工具进行Vibe Coding。">
+    <meta name="keywords" content="ZYER, AI开发者, Web3, Python, JavaScript, 深度学习, 区块链, 数据分析, Cursor, Claude, 机器学习">
+    <meta name="author" content="ZYER">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zyerai.github.io/zyer/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyerai.github.io/zyer/">
+    <meta property="og:title" content="ZYER - AI开发者 & Web3爱好者">
+    <meta property="og:description" content="专注于AI、Web3和数据分析的开发者。分享技术见解和项目经验。">
+    <meta property="og:image" content="https://zyerai.github.io/zyer/images/og-image.jpg">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="ZYER的个人主页">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zyerai.github.io/zyer/">
+    <meta name="twitter:title" content="ZYER - AI开发者 & Web3爱好者">
+    <meta name="twitter:description" content="专注于AI、Web3和数据分析的开发者。分享技术见解和项目经验。">
+    <meta name="twitter:image" content="https://zyerai.github.io/zyer/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- 样式表 -->
     <link rel="stylesheet" href="css/style-ai.css">
     <link rel="stylesheet" href="css/ai-assistant.css">
-    <link rel="stylesheet" href="css/custom-cursor.css">  <!-- 新增 -->
+    <link rel="stylesheet" href="css/custom-cursor.css">
+
+    <!-- Preconnect优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "ZYER",
+      "url": "https://zyerai.github.io/zyer/",
+      "jobTitle": "AI Developer",
+      "description": "AI开发者和Web3爱好者，专注于深度学习、区块链和数据分析",
+      "knowsAbout": ["Artificial Intelligence", "Web3", "Blockchain", "Python", "JavaScript", "Data Analysis"],
+      "sameAs": [
+        "https://github.com/zyerai"
+      ]
+    }
+    </script>
 </head>
 <body>
     <canvas id="particles-canvas"></canvas>
 
     <nav class="navbar">
-        <div class="logo">MyPortfolio</div>
+        <div class="logo">ZYER</div>
         <ul class="nav-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="blog.html">博客</a></li>
-            <li><a href="portfolio.html">作品集</a></li>
-            <li><a href="about.html">关于</a></li>
+            <li><a href="index.html" aria-label="首页">首页</a></li>
+            <li><a href="blog.html" aria-label="博客">博客</a></li>
+            <li><a href="portfolio.html" aria-label="作品集">作品集</a></li>
+            <li><a href="about.html" aria-label="关于">关于</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <!-- 其他内容保持不变... -->
+        <!-- Hero区域 -->
+        <section class="hero">
+            <h1 class="typewriter" id="hero-title"></h1>
+            <p class="gradient-text" style="font-size: 1.5rem; margin: 1rem 0;">AI开发者 / 不入流网工 / Web3爱好者</p>
+            <div style="margin-top: 2rem;">
+                <a href="portfolio.html" class="btn btn-primary">探索我的作品</a>
+                <a href="about.html" class="btn btn-secondary" style="margin-left: 1rem;">了解更多</a>
+            </div>
+        </section>
+
+        <!-- 特色卡片区 -->
+        <section id="features">
+            <h2>我的专长</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card">
+                    <h3 style="color: #00f5ff;">🤖 深度使用AI工具的网工</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">
+                      Vibe Coding，我就是我的工具，我就是我的代码。
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">cursor</span>
+                        <span class="tag">claude</span>
+                        <span class="tag">AI辅助开发</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: #a855f7;">💻 Web3爱好者</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">
+                      分享普通人都能做到的Web3项目，探索去中心化世界的无限可能。
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">OKB</span>
+                        <span class="tag">Binance</span>
+                        <span class="tag">DeFi</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: #ec4899;">📊 智库数据分析</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">
+                        数据可视化、大数据处理、商业智能。从数据中提取有价值的洞察。
+                    </p>
+                    <div style="margin-top: 1rem;">
+                        <span class="tag">NotebookLM</span>
+                        <span class="tag">飞书文档</span>
+                        <span class="tag">数据可视化</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社交链接 -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <h2 style="margin-bottom: 2rem;">关注我</h2>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer"
+                   class="btn btn-secondary" aria-label="GitHub">
+                    🐙 GitHub
+                </a>
+                <a href="mailto:your.email@example.com"
+                   class="btn btn-secondary" aria-label="Email">
+                    📧 Email
+                </a>
+            </div>
+        </section>
     </div>
+
+    <!-- 页脚 -->
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 4rem;">
+        <p>&copy; 2025 ZYER. 用 ❤️ 和 AI 工具构建</p>
+    </footer>
 
     <script src="js/particles.js"></script>
     <script src="js/ai-assistant.js"></script>
-    <script src="js/custom-cursor.js"></script>  <!-- 新增 -->
+    <script src="js/custom-cursor.js"></script>
     <script>
-        // 打字机效果代码保持不变...
+        // 打字机效果
+        const title = "你好，我是ZYER";
+        const titleElement = document.getElementById('hero-title');
+        let index = 0;
+
+        function typeWriter() {
+            if (index < title.length) {
+                titleElement.textContent += title.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            typeWriter();
+
+            // 滚动动画
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+        });
     </script>
 </body>
 </html>
-
-      <!-- 主内容 -->
-      <div class="container">
-          <!-- Hero区域 -->
-          <section class="hero">
-              <h1 class="typewriter" id="hero-title"></h1>
-              <p class="gradient-text" style="font-size: 1.5rem; margin: 1rem 0;">AI开发者 / 不入流网工 / Web3爱好者</p>
-              <div style="margin-top: 2rem;">
-                  <a href="portfolio.html" class="btn btn-primary">探索我的作品</a>
-                  <a href="about.html" class="btn btn-secondary" style="margin-left: 1rem;">了解更多</a>
-              </div>
-          </section>
-
-          <!-- 特色卡片区 -->
-          <section id="features">
-              <h2>我的专长</h2>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                  <div class="card">
-                      <h3 style="color: #00f5ff;">🤖 深度使用AI工具的网工</h3>
-                      <p style="color: var(--text-secondary); margin-top: 1rem;">
-                        Vibe Coding，我就是我的工具，我就是我的代码。
-                      </p>
-                      <div style="margin-top: 1rem;">
-                          <span class="tag">cursor</span>
-                          <span class="tag">claude</span>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <h3 style="color: #a855f7;">💻 Web3爱好者</h3>
-                      <p style="color: var(--text-secondary); margin-top: 1rem;">
-                        分享普通人都能做到的Web3项目。
-                      </p>
-                      <div style="margin-top: 1rem;">
-                          <span class="tag">OKB</span>
-                          <span class="tag">Binance</span>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <h3 style="color: #ec4899;">📊 智库数据分析</h3>
-                      <p style="color: var(--text-secondary); margin-top: 1rem;">
-                          数据可视化、大数据处理、商业智能。从数据中提取有价值的洞察。
-                      </p>
-                      <div style="margin-top: 1rem;">
-                          <span class="tag">Notebooklm</span>
-                          <span class="tag">飞书文档</span>
-                      </div>
-                  </div>
-              </div>
-          </section>
-      </div>
-
-      <script src="js/particles.js"></script>
-      <script src="js/ai-assistant.js"></script>
-      <script>
-          // 打字机效果
-          const title = "你好，我是[ZYER]";
-          const titleElement = document.getElementById('hero-title');
-          let index = 0;
-
-          function typeWriter() {
-              if (index < title.length) {
-                  titleElement.textContent += title.charAt(index);
-                  index++;
-                  setTimeout(typeWriter, 100);
-              }
-          }
-
-          // 页面加载动画
-          document.addEventListener('DOMContentLoaded', () => {
-              typeWriter();
-
-              // 滚动动画
-              const sections = document.querySelectorAll('section');
-              const observer = new IntersectionObserver((entries) => {
-                  entries.forEach(entry => {
-                      if (entry.isIntersecting) {
-                          entry.target.classList.add('visible');
-                      }
-                  });
-              }, { threshold: 0.1 });
-
-              sections.forEach(section => observer.observe(section));
-          });
-      </script>
-  </body>
-  </html>

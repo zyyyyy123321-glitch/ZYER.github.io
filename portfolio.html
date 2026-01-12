@@ -1,158 +1,260 @@
 <!DOCTYPE html>
-  <html lang="zh-CN">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>作品集 - AI开发者</title>
-      <link rel="stylesheet" href="css/style-ai.css">
-      <link rel="stylesheet" href="css/ai-assistant.css">
-      <link rel="stylesheet" href="css/custom-cursor.css">
-  </head>
-  <body>
-      <canvas id="particles-canvas"></canvas>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <nav class="navbar">
-          <div class="logo">MyPortfolio</div>
-          <ul class="nav-links">
-              <li><a href="index.html">首页</a></li>
-              <li><a href="blog.html">博客</a></li>
-              <li><a href="portfolio.html">作品集</a></li>
-              <li><a href="about.html">关于</a></li>
-          </ul>
-      </nav>
+    <!-- SEO -->
+    <title>作品集 - ZYER的项目展示</title>
+    <meta name="description" content="查看ZYER的项目作品集，包括AI开发、Web3应用、数据分析等项目。展示技术实力和创意实现。">
+    <meta name="keywords" content="ZYER, 作品集, 项目, AI, Web3, 数据分析, 开源项目">
 
-      <div class="container">
-          <section>
-              <h1>我的作品</h1>
-              <p style="color: var(--text-secondary);">展示我的项目和创作</p>
-          </section>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="作品集 - ZYER的项目展示">
+    <meta property="og:description" content="查看ZYER的项目作品集，包括AI开发、Web3应用、数据分析等项目。">
+    <meta property="og:url" content="https://zyerai.github.io/zyer/portfolio.html">
 
-          <section>
-              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                  <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;">全部</button>
-                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">AI项目</button>
-                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Web应用</button>
-                  <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">数据分析</button>
-              </div>
-          </section>
+    <link rel="stylesheet" href="css/style-ai.css">
+    <link rel="stylesheet" href="css/ai-assistant.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
 
-          <section>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(168, 85, 247, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          🤖
-                      </div>
-                      <h3>AI智能客服系统</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          基于GPT的智能客服系统，支持多轮对话、情感分析和自动回复。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">Python</span>
-                          <span class="tag">GPT</span>
-                          <span class="tag">FastAPI</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
+    <nav class="navbar">
+        <div class="logo">ZYER</div>
+        <ul class="nav-links">
+            <li><a href="index.html" aria-label="首页">首页</a></li>
+            <li><a href="blog.html" aria-label="博客">博客</a></li>
+            <li><a href="portfolio.html" aria-label="作品集" class="active">作品集</a></li>
+            <li><a href="about.html" aria-label="关于">关于</a></li>
+        </ul>
+    </nav>
 
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          🌐
-                      </div>
-                      <h3>实时协作平台</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          支持多人实时协作的在线文档编辑平台，使用WebSocket实现实时同步。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">React</span>
-                          <span class="tag">Node.js</span>
-                          <span class="tag">WebSocket</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
+    <div class="container">
+        <section>
+            <h1>我的作品</h1>
+            <p style="color: var(--text-secondary);">展示我在AI、Web3和数据分析领域的项目实践</p>
+        </section>
 
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          📊
-                      </div>
-                      <h3>数据可视化仪表盘</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          企业级数据分析仪表盘，支持实时数据更新和交互式图表。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">Vue</span>
-                          <span class="tag">D3.js</span>
-                          <span class="tag">Python</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
+        <!-- 项目分类筛选 -->
+        <section>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center;">
+                <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;" onclick="filterProjects('all')">全部</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterProjects('ai')">AI项目</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterProjects('web3')">Web3</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterProjects('data')">数据分析</button>
+            </div>
+        </section>
 
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(244, 63, 94, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          🎨
-                      </div>
-                      <h3>AI图像生成器</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          基于Stable Diffusion的AI图像生成工具，支持文本生成图像和图像编辑。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">Python</span>
-                          <span class="tag">PyTorch</span>
-                          <span class="tag">Flask</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
+        <section>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- 项目1：AI辅助编程工具 -->
+                <div class="card project-card" data-category="ai">
+                    <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(168, 85, 247, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🤖
+                    </div>
+                    <h3>Claude Code提示词优化工具</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        一个专门为Claude AI设计的提示词优化和管理工具。支持提示词模板、历史记录和效果分析，帮助开发者更好地使用AI进行编程。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">Python</span>
+                        <span class="tag">Claude API</span>
+                        <span class="tag">React</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
 
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(59, 130, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          📱
-                      </div>
-                      <h3>跨平台移动应用</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          使用React Native开发的跨平台移动应用，支持iOS和Android。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">React Native</span>
-                          <span class="tag">Redux</span>
-                          <span class="tag">Firebase</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
+                <!-- 项目2：DeFi收益追踪器 -->
+                <div class="card project-card" data-category="web3">
+                    <div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        💰
+                    </div>
+                    <h3>DeFi收益追踪器</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        追踪多个链（ETH、BSC、OKC）上的DeFi收益。自动计算APY、显示收益趋势，并整合NotebookLM提供投资策略分析。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">Web3.js</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">GraphQL</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
 
-                  <div class="card">
-                      <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-                          🔐
-                      </div>
-                      <h3>区块链投票系统</h3>
-                      <p style="color: var(--text-secondary); margin: 1rem 0;">
-                          基于以太坊的去中心化投票系统，确保投票的透明性和不可篡改性。
-                      </p>
-                      <div style="margin-bottom: 1rem;">
-                          <span class="tag">Solidity</span>
-                          <span class="tag">Web3.js</span>
-                          <span class="tag">Next.js</span>
-                      </div>
-                      <a href="#" class="btn btn-secondary" style="width: 100%;">查看详情</a>
-                  </div>
-              </div>
-          </section>
-      </div>
+                <!-- 项目3：飞书+NotebookLM知识库 -->
+                <div class="card project-card" data-category="data">
+                    <div style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        📚
+                    </div>
+                    <h3>AI驱动知识库系统</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        整合飞书多维表格和Google NotebookLM的智能知识管理系统。支持OCR、智能标签、语义搜索和AI摘要生成。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">飞书开放平台</span>
+                        <span class="tag">NotebookLM API</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
 
-      <script src="js/particles.js"></script>
-      <script src="js/ai-assistant.js"></script>
-      <script src="js/custom-cursor.js"></script>
-      <script>
-          document.addEventListener('DOMContentLoaded', () => {
-              const sections = document.querySelectorAll('section');
-              const observer = new IntersectionObserver((entries) => {
-                  entries.forEach(entry => {
-                      if (entry.isIntersecting) {
-                          entry.target.classList.add('visible');
-                      }
-                  });
-              }, { threshold: 0.1 });
+                <!-- 项目4：Cursor配置分享平台 -->
+                <div class="card project-card" data-category="ai">
+                    <div style="background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(244, 63, 94, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        ⚡
+                    </div>
+                    <h3>Cursor配置分享平台</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        社区驱动的Cursor编辑器配置分享平台。用户可以分享和发现最佳实践、自定义规则和AI工作流。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">Vue 3</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
 
-              sections.forEach(section => observer.observe(section));
-          });
-      </script>
-  </body>
-  </html>
+                <!-- 项目5：Web3空投聚合器 -->
+                <div class="card project-card" data-category="web3">
+                    <div style="background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(59, 130, 246, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        🎁
+                    </div>
+                    <h3>Web3空投聚合器</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        自动发现和追踪Web3项目的空投信息。整合多个数据源，提供任务清单、进度跟踪和收益预估。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">Solidity</span>
+                        <span class="tag">Ethers.js</span>
+                        <span class="tag">React</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
+
+                <!-- 项目6：数据可视化仪表盘 -->
+                <div class="card project-card" data-category="data">
+                    <div style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2)); height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                        📊
+                    </div>
+                    <h3>智能数据可视化仪表盘</h3>
+                    <p style="color: var(--text-secondary); margin: 1rem 0; line-height: 1.6;">
+                        基于飞书多维表格的动态数据可视化工具。支持多种图表类型、实时数据更新和交互式分析。
+                    </p>
+                    <div style="margin-bottom: 1rem;">
+                        <span class="tag">飞书开放平台</span>
+                        <span class="tag">D3.js</span>
+                        <span class="tag">ECharts</span>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <a href="https://github.com/zyerai" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center;">🔗 源码</a>
+                        <a href="#" class="btn btn-primary" style="flex: 1; text-align: center;">🚀 演示</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 更多项目链接 -->
+        <section style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px;">
+            <h3 style="margin-bottom: 1rem;">查看更多项目</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                在GitHub上查看我的所有开源项目和代码贡献
+            </p>
+            <a href="https://github.com/zyerai?tab=repositories" target="_blank" rel="noopener noreferrer"
+               class="btn btn-primary" style="padding: 0.75rem 2rem;">
+                🐙 访问我的GitHub
+            </a>
+        </section>
+    </div>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 4rem;">
+        <p>&copy; 2025 ZYER. 用 ❤️ 和 AI 工具构建</p>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/custom-cursor.js"></script>
+    <script>
+        // 项目筛选功能
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('section button');
+
+            // 更新按钮状态
+            buttons.forEach(btn => {
+                const btnText = btn.textContent.toLowerCase();
+                const isActive =
+                    (category === 'all' && btnText.includes('全部')) ||
+                    (category === 'ai' && btnText.includes('ai')) ||
+                    (category === 'web3' && btnText.includes('web3')) ||
+                    (category === 'data' && btnText.includes('数据'));
+
+                if (isActive) {
+                    btn.classList.remove('btn-secondary');
+                    btn.classList.add('btn-primary');
+                } else if (btnText.includes('全部') || btnText.includes('ai') ||
+                          btnText.includes('web3') || btnText.includes('数据')) {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-secondary');
+                }
+            });
+
+            // 筛选项目
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block';
+                    project.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+
+        // 添加淡入动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .project-card:hover {
+                transform: translateY(-5px);
+                transition: transform 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>

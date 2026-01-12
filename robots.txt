@@ -1,0 +1,10 @@
+# robots.txt for ZYER's website
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://zyerai.github.io/zyer/sitemap.xml
+
+# Disallow specific paths if any
+# Disallow: /private/

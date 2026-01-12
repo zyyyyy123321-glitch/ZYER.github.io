@@ -1,111 +1,240 @@
 <!DOCTYPE html>
-  <html lang="zh-CN">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>技术博客 - AI开发者</title>
-      <link rel="stylesheet" href="css/style-ai.css">
-      <link rel="stylesheet" href="css/ai-assistant.css">
-      <link rel="stylesheet" href="css/custom-cursor.css">
-  </head>
-  <body>
-      <canvas id="particles-canvas"></canvas>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-      <nav class="navbar">
-          <div class="logo">MyPortfolio</div>
-          <ul class="nav-links">
-              <li><a href="index.html">首页</a></li>
-              <li><a href="blog.html">博客</a></li>
-              <li><a href="portfolio.html">作品集</a></li>
-              <li><a href="about.html">关于</a></li>
-          </ul>
-      </nav>
+    <!-- SEO -->
+    <title>技术博客 - ZYER的AI与Web3探索笔记</title>
+    <meta name="description" content="ZYER的技术博客，分享AI开发、Web3探索、数据分析等领域的见解和实战经验。">
+    <meta name="keywords" content="ZYER, 技术博客, AI, Web3, 数据分析, Python, JavaScript, 教程">
 
-      <div class="container">
-          <section>
-              <h1>技术博客</h1>
-              <p style="color: var(--text-secondary);">分享技术见解、项目经验和学习心得</p>
-          </section>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="技术博客 - ZYER的AI与Web3探索笔记">
+    <meta property="og:description" content="分享AI开发、Web3探索、数据分析等领域的见解和实战经验。">
+    <meta property="og:url" content="https://zyerai.github.io/zyer/blog.html">
 
-          <section id="blog-list">
-              <div class="card" style="margin-bottom: 2rem;">
-                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                      <span style="background: linear-gradient(135deg, #00f5ff, #a855f7); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-15</span>
-                      <div>
-                          <span class="tag">AI</span>
-                          <span class="tag">深度学习</span>
-                      </div>
-                  </div>
-                  <h3 style="margin-bottom: 0.5rem;">使用Transformer构建AI聊天机器人</h3>
-                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                      探索如何使用Transformer架构和预训练模型构建一个智能对话系统...
-                  </p>
-                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
-              </div>
+    <link rel="stylesheet" href="css/style-ai.css">
+    <link rel="stylesheet" href="css/ai-assistant.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
 
-              <div class="card" style="margin-bottom: 2rem;">
-                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                      <span style="background: linear-gradient(135deg, #a855f7, #ec4899); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-10</span>
-                      <div>
-                          <span class="tag">React</span>
-                          <span class="tag">前端</span>
-                      </div>
-                  </div>
-                  <h3 style="margin-bottom: 0.5rem;">React 18新特性完全指南</h3>
-                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                      深入了解React 18的并发特性、自动批处理和Suspense改进...
-                  </p>
-                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
-              </div>
+    <nav class="navbar">
+        <div class="logo">ZYER</div>
+        <ul class="nav-links">
+            <li><a href="index.html" aria-label="首页">首页</a></li>
+            <li><a href="blog.html" aria-label="博客" class="active">博客</a></li>
+            <li><a href="portfolio.html" aria-label="作品集">作品集</a></li>
+            <li><a href="about.html" aria-label="关于">关于</a></li>
+        </ul>
+    </nav>
 
-              <div class="card" style="margin-bottom: 2rem;">
-                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                      <span style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-05</span>
-                      <div>
-                          <span class="tag">Python</span>
-                          <span class="tag">数据科学</span>
-                      </div>
-                  </div>
-                  <h3 style="margin-bottom: 0.5rem;">Python数据可视化最佳实践</h3>
-                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                      使用Matplotlib、Seaborn和Plotly创建 stunning的数据可视化图表...
-                  </p>
-                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
-              </div>
+    <div class="container">
+        <section>
+            <h1>技术博客</h1>
+            <p style="color: var(--text-secondary);">分享AI、Web3和数据分析的学习心得与实践经验</p>
+        </section>
 
-              <div class="card" style="margin-bottom: 2rem;">
-                  <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                      <span style="background: linear-gradient(135deg, #ec4899, #f43f5e); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-01-01</span>
-                      <div>
-                          <span class="tag">Docker</span>
-                          <span class="tag">DevOps</span>
-                      </div>
-                  </div>
-                  <h3 style="margin-bottom: 0.5rem;">Docker容器化部署实战</h3>
-                  <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-                      从零开始学习Docker，实现应用的容器化部署和编排...
-                  </p>
-                  <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多</a>
-              </div>
-          </section>
-      </div>
+        <!-- 分类筛选 -->
+        <section>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center;">
+                <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;" onclick="filterPosts('all')">全部</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterPosts('ai')">AI开发</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterPosts('web3')">Web3</button>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem;" onclick="filterPosts('data')">数据分析</button>
+            </div>
+        </section>
 
-      <script src="js/particles.js"></script>
-      <script src="js/ai-assistant.js"></script>
-      <script src="js/custom-cursor.js"></script>
-      <script>
-          document.addEventListener('DOMContentLoaded', () => {
-              const sections = document.querySelectorAll('section');
-              const observer = new IntersectionObserver((entries) => {
-                  entries.forEach(entry => {
-                      if (entry.isIntersecting) {
-                          entry.target.classList.add('visible');
-                      }
-                  });
-              }, { threshold: 0.1 });
+        <section id="blog-list">
+            <!-- 文章1 -->
+            <article class="card blog-post" data-category="ai" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #00f5ff, #a855f7); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2025-01-10</span>
+                    <div>
+                        <span class="tag">AI</span>
+                        <span class="tag">Cursor</span>
+                        <span class="tag">Vibe Coding</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #00f5ff;">Vibe Coding：我与AI的协作编程之道</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    探讨如何使用Cursor和Claude等AI工具实现高效的编程体验。分享我"我就是我的工具，我就是我的代码"的编程哲学，以及如何让AI成为真正的编程伙伴而非简单的代码生成器。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：8分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
 
-              sections.forEach(section => observer.observe(section));
-          });
-      </script>
-  </body>
-  </html>
+            <!-- 文章2 -->
+            <article class="card blog-post" data-category="web3" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #a855f7, #ec4899); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2025-01-05</span>
+                    <div>
+                        <span class="tag">Web3</span>
+                        <span class="tag">DeFi</span>
+                        <span class="tag">入门教程</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #a855f7;">普通人如何开始Web3之旅：从零到DeFi</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    面向Web3新手的完整指南。从创建钱包、获取首个代币，到参与流动性挖矿和staking。分享我在OKB和Binance生态中的实战经验，让普通人也能轻松进入Web3世界。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：12分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
+
+            <!-- 文章3 -->
+            <article class="card blog-post" data-category="data" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #ec4899, #f43f5e); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-12-28</span>
+                    <div>
+                        <span class="tag">数据分析</span>
+                        <span class="tag">NotebookLM</span>
+                        <span class="tag">飞书</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #ec4899;">用NotebookLM和飞书构建个人知识库</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    详细介绍如何利用Google NotebookLM的AI能力结合飞书文档的多维表格功能，打造一个强大的个人知识管理系统。从资料收集、智能整理到快速检索的完整工作流。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：10分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
+
+            <!-- 文章4 -->
+            <article class="card blog-post" data-category="ai" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-12-20</span>
+                    <div>
+                        <span class="tag">AI</span>
+                        <span class="tag">Claude</span>
+                        <span class="tag">提示词工程</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #3b82f6;">Claude提示词工程实战技巧</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    分享在使用Claude AI过程中的提示词技巧和最佳实践。如何让Claude更好地理解需求、生成高质量代码，以及在复杂任务中的提示词设计思路。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：7分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
+
+            <!-- 文章5 -->
+            <article class="card blog-post" data-category="web3" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #00f5ff, #3b82f6); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-12-15</span>
+                    <div>
+                        <span class="tag">Web3</span>
+                        <span class="tag">Solidity</span>
+                        <span class="tag">智能合约</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #00f5ff;">Solidity智能合约开发入门指南</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    从零开始学习Solidity智能合约开发。介绍基本的语法、数据结构、安全最佳实践，并带领大家完成一个简单的代币合约项目。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：15分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
+
+            <!-- 文章6 -->
+            <article class="card blog-post" data-category="data" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="background: linear-gradient(135deg, #a855f7, #ec4899); padding: 0.25rem 0.75rem; border-radius: 5px; font-size: 0.875rem;">2024-12-10</span>
+                    <div>
+                        <span class="tag">数据分析</span>
+                        <span class="tag">可视化</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+                <h3 style="margin-bottom: 0.5rem; color: #a855f7;">数据可视化之美：从数据到洞察</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+                    探讨数据可视化的艺术与科学。如何选择合适的图表类型、配色方案，以及如何用数据讲好一个故事。包含多个实战案例和代码示例。
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="color: var(--text-muted); font-size: 0.875rem;">📖 阅读时间：11分钟</span>
+                    <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">阅读更多 →</a>
+                </div>
+            </article>
+        </section>
+
+        <!-- 加载更多 -->
+        <section style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-primary" style="padding: 0.75rem 2rem;">加载更多文章</button>
+        </section>
+    </div>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 4rem;">
+        <p>&copy; 2025 ZYER. 用 ❤️ 和 AI 工具构建</p>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/ai-assistant.js"></script>
+    <script src="js/custom-cursor.js"></script>
+    <script>
+        // 博客分类筛选功能
+        function filterPosts(category) {
+            const posts = document.querySelectorAll('.blog-post');
+            const buttons = document.querySelectorAll('section button');
+
+            // 更新按钮状态
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(category) ||
+                    (category === 'all' && btn.textContent === '全部')) {
+                    btn.classList.remove('btn-secondary');
+                    btn.classList.add('btn-primary');
+                } else {
+                    btn.classList.remove('btn-primary');
+                    btn.classList.add('btn-secondary');
+                }
+            });
+
+            // 筛选文章
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                    post.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        // 添加淡入动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
